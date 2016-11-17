@@ -1502,7 +1502,7 @@ class Primitives {
 
   static _genericApplyFunctionWithPositionalArguments(Function function,
                                                       List arguments) {
-    int argumentCount = arguments.length;
+    int argumentCount = arguments.length - 2;
     String selectorName =
         '${JS_GET_NAME(JsGetName.CALL_PREFIX)}\$$argumentCount';
     var jsFunction = JS('var', '#[#]', function, selectorName);
